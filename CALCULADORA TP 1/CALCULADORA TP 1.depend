@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1567396990 source:c:\users\facundo\documents\facc\programación\programacion 1\tp\calculadora tp 1\main.c
+
+1567469299 source:c:\users\alumno\downloads\calculadora--master\calculadora tp 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1567469702 source:c:\users\alumno\downloads\calculadora--master\calculadora tp 1\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1567469683 c:\users\alumno\downloads\calculadora--master\calculadora tp 1\funciones.h
+
+1567738420 source:c:\users\facundo\documents\facc\programación\programacion 1\tp\calculadora_2-master\calculadora tp 1\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"funciones.h"
+
+1567737729 c:\users\facundo\documents\facc\programación\programacion 1\tp\calculadora_2-master\calculadora tp 1\funciones.h
+
+1567657453 source:c:\users\facundo\documents\facc\programación\programacion 1\tp\calculadora_2-master\calculadora tp 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"funciones.h"
+

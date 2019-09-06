@@ -1,0 +1,213 @@
+#include <stdio.h>
+
+void hacerCalculo()
+{
+    int t;
+    int x;
+    int y;
+    float numero1;
+    float numero2;
+    int opcion;
+    int operador;
+    int operacion;
+    float resultadoSuma;
+    float resultadoResta;
+    float resultadoDivision;
+    float resultadoMultiplicacion;
+    float factorial1;
+    float factorial2;
+
+
+
+    x=0;
+    y=0;
+    t=1;
+
+
+
+    while(t!=0)
+    {
+        printf("----CALCULADORA----\n\n");
+
+        if(x==1)
+        {
+            printf("1. Ingresar primer operando(A=%f.0)\n",numero1);
+        }
+        else
+        {
+            printf("1. Ingresar primer operando(A=x)\n");
+        }
+        if(y==1)
+        {
+            printf("2. Ingresar segundo operando(B=%f.0)\n",numero2);
+        }
+        else
+        {
+            printf("2. Ingresar segundo operando(B=y)\n");
+        }
+
+        printf("3. Calcular operaciones\n");
+        printf("4. Informar resultados\n");
+        printf("5. Salir\n\n\n");
+
+        printf("ingrese una opcion del menu\n");
+        scanf("%d", &opcion);
+
+
+
+        switch(opcion)
+        {
+            case 1:
+
+                numero1=pedirNumero("Ingrese primer operando:\n");
+                x=1;
+                system("cls");
+                break;
+            case 2:
+                numero2=pedirNumero("Ingrese segundo operando:\n");
+                y=1;
+                system("cls");
+                break;
+            case 3:
+                if(x==1 && y==1)
+                {
+                    printf("1 Calcular suma\n");
+                    printf("2 Calcular resta\n");
+                    printf("3 Calcular division\n");
+                    printf("4 Calcular multiplicacion\n");
+                    printf("5 Calcular factorial\n");
+
+                    printf("Que operacion desea realizar?\n");
+                    scanf("%d", &operacion);
+
+                    switch(operacion)
+                    {
+                        case 1:
+                            resultadoSuma=sumar(numero1,numero2);
+                            system("cls");
+                            break;
+                        case 2:
+                            resultadoResta=restar(numero1,numero2);
+                            system("cls");
+                            break;
+                        case 3:
+
+
+                            resultadoDivision=division(numero1,numero2);
+                            system("cls");
+                            break;
+                        case 4:
+                            resultadoMultiplicacion=multiplicar(numero1,numero2);
+                            system("cls");
+                            break;
+                    }
+                }
+                else
+                {
+                    printf("\nerror, no se puede realizar la operacion sin sus operandos\n");
+                    system("pause");
+                    system("cls");
+
+                }
+                break;
+
+            case 4:
+                if(operacion==1)
+                {
+                    printf("El resultado de A+B es: %f\n", resultadoSuma);
+                }
+                else if(operacion==2)
+                {
+                    printf("El resultado de A-B es: %f\n", resultadoResta);
+                }
+                else if(operacion==3)
+                {
+                    printf("El resultado de A/B es: %f\n", resultadoDivision);
+                }
+                else if(operacion==4)
+                {
+                    printf("El resultado de A*B es: %f\n", resultadoMultiplicacion);
+                }
+                else if(operacion==5)
+                {
+                    printf("El factorial de A es: %f y El factorial de B es: %f\n",factorial1,factorial2);
+                }
+
+                system("pause");
+                system("cls");
+
+
+                break;
+
+            case 5:
+                system("cls");
+                printf("\n\nUsted finaliza el programa\n");
+                t=0;
+                break;
+
+
+        }
+
+
+
+    }
+
+
+}
+
+
+float pedirNumero(char *mensaje)
+{
+    float numero;
+    printf(mensaje);
+    scanf("%f",&numero);
+    return numero;
+}
+
+
+
+
+float sumar(numero1,numero2)
+
+{
+    float resultado;
+
+    resultado=numero1+numero2;
+
+    return resultado;
+
+
+}
+
+float restar(numero1,numero2)
+{
+    float resultado;
+
+    resultado=numero1-numero2;
+
+    return resultado;
+}
+
+float division(numero1,numero2)
+{
+    float resultado;
+
+    resultado=numero1/numero2;
+
+    return resultado;
+}
+
+float multiplicar(numero1,numero2)
+{
+    float resultado;
+
+    resultado=numero1*numero2;
+
+    return resultado;
+}
+
+
+
+
+
+
